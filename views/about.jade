@@ -1,0 +1,39 @@
+extends layout
+
+block content
+
+  div(ng-controller=pageLoad)
+    h1= title
+
+    p #{root}...
+    
+    p firewire uses Express + Angular + Firebase to create a super-quick realtime database wireup.
+
+    p Instead of waiting for firebase to be called by Angular (which can be quite slow to establish), Firewire calls firebase from Express.
+    p It then wires it straight into the DOM prior to any client js loading.
+    p It then calls it from Angular, seamlessly swapping over to a realtime connection.
+
+    hr
+
+    h2 Firewire Data: 
+    p This data loads direct from the server and seamlessly switches to realtime moments later - thanks to firewire...
+      br
+      strong ...
+        span(ng-cloak) {{fw.child.hello}}
+
+    h2 Angularfire without firewire
+    p You'll notice a slight delay in this data due to no firewire :(
+      br
+      strong {{nofw.child.hello}}
+
+    hr
+
+    h2 Prototype using prewire
+
+block page_dependancies
+  //- Page level dependancies go here ...
+
+  //- firestack loads server instance
+  script.
+    var fw = !{firewire};
+  
