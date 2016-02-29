@@ -24,7 +24,7 @@ At this stage the stack does not go below (i.e. Server, hosting, etc.) or above 
 - angular loads `fw` to `$rootScope.fw` but also establishes a client connection to firebase and switches `$rootScope.fw` to a realtime connection seamlessly.
 
 ### firewire usage
-`#{fw.blah} 	// Loads static data (i.e. doesn't switch to realtime`
+`#{fw.blah} 	// Loads static data (i.e. doesn't switch to realtime`  
 `{{fw.blah}} 	// Switches to realtime data once a connection is made`
 ## Fire
 
