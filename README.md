@@ -1,7 +1,7 @@
 # firestack
 express + angular + firebase
 
-## This project is still half-baked sorry
+## This project is still half-baked sorry...
 
 Firestack solves the problems of angular + firebase alone - creating an awesome firey stack.  
 - Firewire
